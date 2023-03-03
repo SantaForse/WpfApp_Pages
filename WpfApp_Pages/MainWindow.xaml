@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:WpfApp_Pages.Controls"
         xmlns:local="clr-namespace:WpfApp_Pages"
         mc:Ignorable="d"
         Title="WPF APP - Pages" Height="450" Width="800">
@@ -12,7 +13,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox Grid.Column="0" Name="lbox_NavMenu" SelectionMode="Single" SelectionChanged="lbox_NavMenu_SelectionChanged"></ListBox>
-        <Frame Grid.Column="1" x:Name="frame_PageFrame"/>
+        <ListBox Grid.Column="0" Width="50" Name="lbox_NavMenu" SelectionMode="Single" SelectionChanged="lbox_NavMenu_SelectionChanged" BorderThickness="0">
+            <controls:NavButton Margin="3" Padding="6" NavLink="/Pages/Todos/.xaml" Icon=""/>
+        </ListBox>
+        <Frame Grid.Column="1" x:Name="frame_PageFrame" NavigationUIVisibility="Hidden" Background="#ececec"/>
     </Grid>
 </Window>

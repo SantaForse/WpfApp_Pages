@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp_Pages.Controls;
 
-namespace WpfApp_Pages
+namespace WpfApp_Pages.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Todos.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Todos : Page
     {
-        public MainWindow()
+        public Todos()
         {
             InitializeComponent();
-        }
-
-        private void lbox_NavMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var selected = lbox_NavMenu.SelectedItem as NavButton;
-            frame_PageFrame.Navigate(selected?.NavLink);
         }
     }
 }
